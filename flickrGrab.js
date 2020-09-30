@@ -5,9 +5,9 @@
 	www.brick.technology
 */
 
-var apiKey = "a47fd20d3568e7e66e5a2f44fc7a986c" // Replace text with your Flickr API key
-var userID = "190267471@N04" // Replace with your user id  (ex: 137267481@N04)
-var photoSetID = "72157716193056353" // Replace with your photoset id (ex: 72157716193056353")
+var apiKey = "YOUR_API_KEY_HERE" // Replace text with your Flickr API key
+var userID = "YOUR_USER_ID_HERE" // Replace with your user id  (ex: 137267481@N04)
+var photoSetID = "YOUR_PHOTO_SET_ID_HERE" // Replace with your photoset id (ex: 72157716193056353")
 var imageSize = "c" // Visit https://www.flickr.com/services/api/misc.urls.html for image size codes
 
 function myPhotos(setId) {
