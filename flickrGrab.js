@@ -15,9 +15,9 @@ function myPhotos(setId) {
 
     $.getJSON(photoSearch, function (data) {
         $.each(data.photoset.photo, function (i, item) {
-            var img_src = "https://live.staticflickr.com/" + item.server + "/" + item.id + "_" + item.secret + "_c.jpg";
-            var img_thumb = $("<img/>").attr("src", img_src).attr("class", "galleryPhoto")
-            $(img_thumb).appendTo("#gallery");
+            var link = "https://live.staticflickr.com/" + item.server + "/" + item.id + "_" + item.secret + "_c.jpg";
+            var imageHTML = $("<img/>").attr("src", link).attr("class", "galleryPhoto")
+            $(imageHTML).appendTo("#gallery");
         });
     });
 }
