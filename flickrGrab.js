@@ -11,13 +11,13 @@ var photoSetID = "YOUR_PHOTO_SET_ID_HERE" // Replace with your photoset id (ex: 
 var imageSize = "c" // Visit https://www.flickr.com/services/api/misc.urls.html for image size codes
 
 function myPhotos(setId) {
-    var URL = "https://api.flickr.com/services/rest/" + "?method=flickr.photosets.getPhotos" + "&api_key=" + apiKey + "&user_id=" + userID + "&photoset_id=" + setId + "&privacy_filter=1" + "&per_page=20" + "&format=json&nojsoncallback=1";
+    var photoSearch = "https://api.flickr.com/services/rest/" + "?method=flickr.photosets.getPhotos" + "&api_key=" + apiKey + "&user_id=" + userID + "&photoset_id=" + setId + "&privacy_filter=1" + "&per_page=20" + "&format=json&nojsoncallback=1";
 
-    $.getJSON(URL, function (data) {
+    $.getJSON(photoSearch, function (data) {
         $.each(data.photoset.photo, function (i, item) {
             var img_src = "https://live.staticflickr.com/" + item.server + "/" + item.id + "_" + item.secret + "_c.jpg";
             var img_thumb = $("<img/>").attr("src", img_src).attr("class", "galleryPhoto")
-            $(img_thumb).appendTo("#flickr-images");
+            $(img_thumb).appendTo("#gallery");
         });
     });
 }
