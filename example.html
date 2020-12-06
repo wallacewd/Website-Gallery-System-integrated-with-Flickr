@@ -1,38 +1,119 @@
 
-<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dan's Gallery Demo</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-<head>
-	<meta charset="utf-8">
-	<title>Example Gallery</title>
-	<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <style>
 
-	<style>
-		.galleryPhoto {
-			border-radius: 5%;
-			max-width: 100%;
-			height: auto;
-			padding-right: 10px;
-			padding-top: 10px;
-			padding-bottom: 10px;
-			margin-right:10px
-		}
-	</style>
+            .column {
+                float: left;
+                width: 25%;
 
-</head>
+            }
 
-<body>
+            .column img {
+                opacity: 0.8;
+                cursor: pointer;
+            }
 
-	<div class="main-container">
+            .column img:hover {
+                opacity: 1;
+            }
 
-		<h1>Example Gallery</h1>
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
 
-		<div id="gallery"></div>
+            .container {
+                position: relative;
+                display: none;
+            }
 
-		<script src="flickrGrab.js"></script>
+            #imgtext {
+                position: absolute;
+                top: 1vh;
+                left: 15px;
+                color: white;
+                font-size: 35px;
+                background-color: rgba(0, 0, 0, 0.39);
+            }
 
-	</div>
+            .closebtn {
+                position: absolute;
+                top: 1vh;
+                right: 4vw;
+                color: white;
+                font-size: 35px;
+                cursor: pointer;
+            }
 
-</body>
+            #thumb {
+                position: absolute;
+                height: 15vh;
+                padding:1px;
+            }
 
+            #menuLeft{
+                height:60vh;
+                width:100%;
+                overflow: auto;
+            }
+            
+            #full{
+                max-height:30vh;
+                height:100%;
+            }
+
+            #flickrIMG{
+                height:15vh;
+                padding-left:50%;
+                padding-bottom:0px;
+                
+            }
+
+            #thumbCont{
+                left:50vw;
+            }
+
+        </style>
+    </head>
+
+
+
+
+    <body>
+        <center>
+
+            <div class="row" id ="thumbCont">
+                <div class="col-sm-2" id="menuLeft">
+
+                </div>
+
+                <div class="expaindContainer">
+                    <div class="col-sm-10" id="full">
+
+                        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+            
+
+                        <img id="expandedImg" style="max-width:100%;max-height:90vh;">
+            
+                        <div id="imgtext" id="imageTitle">
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+    
+        </center>
+
+
+     </body>
+<script src="flickrGrab.js"></script>
 </html>
