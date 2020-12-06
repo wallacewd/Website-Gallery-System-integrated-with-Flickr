@@ -6,4 +6,4 @@
 3. Click on albums, click on the album you want to display on your site, and grab the id from the url (ex: 72157716282751983)
 
 ## That is it! Save and go vist your new website gallery! 
-### PS: You can also choose the size of the pictures you grab from flickr in the flickrGrab.js file. More info is in that file.
+(PS: You can also choose the size of the pictures you grab from flickr in the flickrGrab.js file. More info is in that file.)
