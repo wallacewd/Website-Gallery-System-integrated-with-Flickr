@@ -1,0 +1,72 @@
+
+.column {
+    float: left;
+    width: 25%;
+
+}
+
+.column img {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.column img:hover {
+    opacity: 1;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.container {
+    position: relative;
+    display: none;
+}
+
+#imgtext {
+    position: absolute;
+    top: 1vh;
+    left: 15px;
+    color: white;
+    font-size: 35px;
+    background-color: rgba(0, 0, 0, 0.39);
+}
+
+.closebtn {
+    position: absolute;
+    top: 1vh;
+    right: 4vw;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+#thumb {
+    position: absolute;
+    height: 15vh;
+    padding:1px;
+}
+
+#menuLeft{
+    height:60vh;
+    width:100%;
+    overflow: auto;
+}
+
+#full{
+    max-height:30vh;
+    height:100%;
+}
+
+#flickrIMG{
+    height:15vh;
+    padding-left:50%;
+    padding-bottom:0px;
+
+}
+
+#thumbCont{
+    left:50vw;
+}
